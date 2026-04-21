@@ -1,5 +1,75 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Fratelli d'Italia">
-<title>Fratelli d'Italia - Logo ufficiale</title>
-<image width="512" height="512" xlink:href="data:image/png;base64,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"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Sara Calosci — Fratelli d'Italia Pistoia">
+  <title>Sara Calosci — Fratelli d'Italia · Pistoia</title>
+  <desc>Stemma della campagna elettorale di Sara Calosci, candidata al Consiglio Comunale di Pistoia con Fratelli d'Italia. Elezioni amministrative 24-25 maggio 2026.</desc>
+
+  <defs>
+    <!-- path per il testo curvo in alto -->
+    <path id="arc-top" d="M 76 256 A 180 180 0 0 1 436 256" fill="none"/>
+    <!-- clip al cerchio interno -->
+    <clipPath id="inner-circle">
+      <circle cx="256" cy="256" r="238"/>
+    </clipPath>
+    <!-- clip del cuore, per i tre colori -->
+    <clipPath id="heart-clip">
+      <path d="M 256 446
+               C 198 408 160 374 160 348
+               C 160 328 175 318 196 318
+               C 220 318 240 335 256 358
+               C 272 335 292 318 316 318
+               C 337 318 352 328 352 348
+               C 352 374 314 408 256 446 Z"/>
+    </clipPath>
+    <!-- ombra morbida interna -->
+    <radialGradient id="inner-shade" cx="50%" cy="45%" r="65%">
+      <stop offset="0%" stop-color="#12315a"/>
+      <stop offset="100%" stop-color="#0b2545"/>
+    </radialGradient>
+  </defs>
+
+  <!-- bordo esterno navy + anello bianco -->
+  <circle cx="256" cy="256" r="252" fill="#0b2545"/>
+  <circle cx="256" cy="256" r="246" fill="#ffffff"/>
+  <circle cx="256" cy="256" r="238" fill="url(#inner-shade)"/>
+
+  <g clip-path="url(#inner-circle)">
+    <!-- pannello bianco in basso -->
+    <rect x="0" y="320" width="512" height="220" fill="#ffffff"/>
+
+    <!-- fascia tricolore orizzontale sopra il pannello bianco -->
+    <rect x="0" y="308" width="170" height="12" fill="#009246"/>
+    <rect x="170" y="308" width="172" height="12" fill="#ffffff"/>
+    <rect x="342" y="308" width="170" height="12" fill="#ce2b37"/>
+
+    <!-- cuore tricolore (sostituisce la fiamma) -->
+    <g clip-path="url(#heart-clip)">
+      <rect x="152" y="310" width="72" height="150" fill="#009246"/>
+      <rect x="224" y="310" width="64" height="150" fill="#ffffff"/>
+      <rect x="288" y="310" width="72" height="150" fill="#ce2b37"/>
+    </g>
+    <!-- profilo del cuore -->
+    <path d="M 256 446
+             C 198 408 160 374 160 348
+             C 160 328 175 318 196 318
+             C 220 318 240 335 256 358
+             C 272 335 292 318 316 318
+             C 337 318 352 328 352 348
+             C 352 374 314 408 256 446 Z"
+          fill="none" stroke="#0b2545" stroke-width="3"/>
+
+    <!-- testo curvo in alto: FRATELLI d'ITALIA -->
+    <text font-family="Poppins, 'Inter', 'Helvetica', sans-serif" font-weight="700" fill="#ffffff" font-size="36" letter-spacing="4">
+      <textPath href="#arc-top" startOffset="50%" text-anchor="middle">FRATELLI d'ITALIA</textPath>
+    </text>
+
+    <!-- blocco centrale: SARA CALOSCI -->
+    <g text-anchor="middle" font-family="Poppins, 'Inter', 'Helvetica', sans-serif">
+      <text x="256" y="192" font-size="56" font-weight="700" fill="#f5c043" letter-spacing="1">SARA</text>
+      <text x="256" y="256" font-size="56" font-weight="700" fill="#f5c043" letter-spacing="1">CALOSCI</text>
+      <text x="256" y="292" font-size="16" font-weight="500" fill="#ffffff" letter-spacing="6">PISTOIA · 2026</text>
+    </g>
+  </g>
+
+  <!-- ring esterno (copre l'interno del cerchio bianco) -->
+  <circle cx="256" cy="256" r="246" fill="none" stroke="#0b2545" stroke-width="2"/>
 </svg>
