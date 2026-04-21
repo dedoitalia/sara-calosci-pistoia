@@ -3,19 +3,36 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="theme-color" content="#0b2545" />
 <title>Sara Calosci — Candidata Consigliere Comunale Pistoia | Fratelli d'Italia</title>
-<meta name="description" content="Sara Calosci, candidata al Consiglio Comunale di Pistoia con Fratelli d'Italia. Elezioni amministrative maggio 2026. Pistoia nel cuore." />
+<meta name="description" content="Sara Calosci, candidata al Consiglio Comunale di Pistoia con Fratelli d'Italia. Elezioni amministrative 24-25 maggio 2026. Pistoia nel cuore." />
 <meta name="author" content="Sara Calosci" />
+<meta name="robots" content="index,follow" />
+
+<!-- Open Graph / Twitter -->
+<meta property="og:locale" content="it_IT" />
 <meta property="og:title" content="Sara Calosci — Pistoia nel cuore" />
-<meta property="og:description" content="Candidata al Consiglio Comunale di Pistoia — Fratelli d'Italia. Elezioni maggio 2026." />
+<meta property="og:description" content="Candidata al Consiglio Comunale di Pistoia — Fratelli d'Italia. Elezioni 24-25 maggio 2026." />
 <meta property="og:type" content="website" />
-<meta property="og:image" content="https://files.catbox.moe/is1qh6.jpg" />
+<meta property="og:image" content="assets/img/og-image.jpg" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:image" content="https://files.catbox.moe/is1qh6.jpg" />
+<meta name="twitter:image" content="assets/img/og-image.jpg" />
+
+<!-- Favicon & icone -->
 <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg" />
+<link rel="apple-touch-icon" href="assets/img/favicon.svg" />
+
+<!-- Font: preconnect + caricamento non bloccante -->
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" media="print" onload="this.media='all'" />
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" /></noscript>
+
+<!-- Foto hero in preload per migliorare LCP -->
+<link rel="preload" as="image" href="assets/img/sara-ritratto.jpg" />
+
+<!-- CSS: singolo bundle ottimizzato -->
 <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
@@ -28,26 +45,28 @@
 <!-- NAV -->
 <header class="site-header">
   <div class="container nav-inner">
-    <a href="#top" class="brand">
-      <span class="brand-monogram">SC</span>
+    <a href="#top" class="brand" aria-label="Sara Calosci — Home">
+      <span class="brand-monogram" aria-hidden="true">SC</span>
       <span class="brand-text">
         <span class="brand-line1">Sara Calosci</span>
         <span class="brand-line2">Consigliere Comunale · Pistoia</span>
       </span>
     </a>
-    <span class="fdi-logo" aria-hidden="true">
-      <img src="https://files.catbox.moe/s7jnrh.png" alt="Fratelli d'Italia — Giorgia Meloni" />
-    </span>
+
+    <a class="fdi-logo" href="https://www.fratelli-italia.it/" target="_blank" rel="noopener" aria-label="Sito ufficiale Fratelli d'Italia">
+      <img src="assets/img/fdi-logo.svg" alt="Fratelli d'Italia" width="52" height="52" decoding="async" />
+    </a>
+
     <nav class="site-nav" aria-label="Navigazione principale">
       <a href="#chi-sono">Chi sono</a>
       <a href="#programma">Programma</a>
       <a href="#come-votare">Come votare</a>
-      <a href="#sindaco">Sindaco</a>
+      <a href="#celesti">Celesti Sindaco</a>
       <a href="#eventi">Eventi</a>
       <a href="#contatti">Contatti</a>
       <a href="#sostieni" class="nav-cta">Sostieni</a>
     </nav>
-    <button class="nav-toggle" aria-label="Apri menu" aria-expanded="false">
+    <button class="nav-toggle" aria-label="Apri menu" aria-expanded="false" aria-controls="site-nav">
       <span></span><span></span><span></span>
     </button>
   </div>
@@ -72,25 +91,24 @@
         <a href="#programma" class="btn btn-primary">Scopri il programma</a>
         <a href="#sostieni" class="btn btn-ghost">Contattami</a>
       </div>
-      <div class="hero-badge">
-        <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M12 2 4 5v6c0 5 3.4 9.6 8 11 4.6-1.4 8-6 8-11V5l-8-3z" fill="currentColor"/></svg>
-        <span>Lista <strong>Fratelli d'Italia</strong> · Comune di Pistoia</span>
-      </div>
+
       <div class="hero-logo-strip">
-        <img src="https://files.catbox.moe/s7jnrh.png" alt="Fratelli d'Italia — Giorgia Meloni" />
+        <img src="assets/img/fdi-logo.svg" alt="" width="40" height="40" decoding="async" loading="lazy" aria-hidden="true" />
         <span class="strip-text">
-          <span class="strip-lab">Lista Ufficiale</span>
-          <span class="strip-val">Fratelli d'Italia — Giorgia Meloni</span>
+          <span class="strip-lab">Lista · Consiglio Comunale</span>
+          <span class="strip-val">Fratelli d'Italia — Pistoia</span>
         </span>
       </div>
     </div>
 
     <figure class="hero-photo">
       <div class="photo-frame">
-        <img src="https://files.catbox.moe/93l4df.jpg"
-             srcset="https://files.catbox.moe/93l4df.jpg 1x, https://files.catbox.moe/amc80t.jpg 2x"
+        <img src="assets/img/sara-ritratto.jpg"
+             srcset="assets/img/sara-ritratto.jpg 1x, assets/img/sara-ritratto@2x.jpg 2x"
              alt="Sara Calosci — ritratto istituzionale"
-             loading="eager"
+             width="440" height="550"
+             fetchpriority="high"
+             decoding="async"
              onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
         <div class="photo-placeholder" aria-hidden="true">
           <svg viewBox="0 0 120 120" width="120" height="120"><circle cx="60" cy="46" r="22" fill="#d9cfbd"/><path d="M18 108c4-22 22-34 42-34s38 12 42 34" fill="#d9cfbd"/></svg>
@@ -133,12 +151,12 @@
         nei mercati, nelle scuole, nelle aziende del territorio.
       </p>
       <ul class="values-grid">
-        <li><span>◆</span>Ascolto del territorio</li>
-        <li><span>◆</span>Sicurezza e legalità</li>
-        <li><span>◆</span>Famiglia e natalità</li>
-        <li><span>◆</span>Lavoro e impresa</li>
-        <li><span>◆</span>Cultura e identità</li>
-        <li><span>◆</span>Trasparenza</li>
+        <li><span aria-hidden="true">◆</span>Ascolto del territorio</li>
+        <li><span aria-hidden="true">◆</span>Sicurezza e legalità</li>
+        <li><span aria-hidden="true">◆</span>Famiglia e natalità</li>
+        <li><span aria-hidden="true">◆</span>Lavoro e impresa</li>
+        <li><span aria-hidden="true">◆</span>Cultura e identità</li>
+        <li><span aria-hidden="true">◆</span>Trasparenza</li>
       </ul>
     </div>
     <aside class="col-side">
@@ -163,7 +181,7 @@
   </div>
 </section>
 
-<!-- PROGRAMMA (accordion style con + come Jacopo Venturi) -->
+<!-- PROGRAMMA -->
 <section class="section" id="programma">
   <div class="container">
     <div class="section-header">
@@ -206,7 +224,7 @@
           <p>
             Sostegno alle famiglie pistoiesi con agevolazioni su asili, mense e attività
             sportive. Politiche per la casa ai giovani e ai nuovi nuclei familiari, perché
-            chi vuole mettere su famiglia a Pistoia non debba rinunciarvi.
+            chi vuole mettere su famiglia a Pistoia non debba rinunciarci.
           </p>
           <ul>
             <li>Bonus famiglia su tariffe comunali (mensa, trasporto, sport).</li>
@@ -303,7 +321,41 @@
   </div>
 </section>
 
-<!-- COME VOTARE - infografica scheda elettorale -->
+<!-- SOSTEGNO CELESTI SINDACO -->
+<section class="section-celesti" id="celesti" aria-label="Sostegno a Anna Maria Celesti">
+  <div class="container">
+    <div class="celesti-card">
+      <div class="celesti-visual">
+        <span class="celesti-monogram" aria-hidden="true">AC</span>
+        <span class="celesti-role">Candidata Sindaco</span>
+      </div>
+      <div class="celesti-text">
+        <p class="eyebrow">La coalizione</p>
+        <h2 class="celesti-title">
+          A sostegno di <strong>Anna Maria Celesti</strong><br/>
+          Sindaco di Pistoia.
+        </h2>
+        <p class="celesti-body">
+          La mia candidatura è al fianco di <strong>Anna Maria Celesti</strong>, la scelta
+          di continuità per una Pistoia <em>sicura, moderna e a misura di chi la vive</em>.
+          Con Anna Maria abbiamo una visione condivisa: amministrare con serietà,
+          ascoltare i quartieri, custodire l'identità della città senza rinunciare
+          alla sua crescita.
+        </p>
+        <p class="celesti-body">
+          Il voto a Sara Calosci è anche un voto alla sua squadra: per dare continuità
+          al buon governo e forza alla lista di Fratelli d'Italia in Consiglio Comunale.
+        </p>
+        <div class="celesti-meta">
+          <span>📍 <strong>Pistoia</strong> · amministrative 24-25 Maggio 2026</span>
+          <span>🏛️ Coalizione di <strong>centrodestra</strong></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COME VOTARE -->
 <section class="section section-vote" id="come-votare">
   <div class="container">
     <div class="section-header">
@@ -315,59 +367,22 @@
       </p>
     </div>
 
-    <!-- FAC-SIMILE scheda elettorale ispirato al modello ufficiale -->
+    <!-- FAC-SIMILE scheda -->
     <div class="ballot-mockup">
       <div class="ballot-mockup-header">
         <span class="ballot-ref">Fac-simile scheda · Elezioni Comunali Pistoia 2026</span>
       </div>
 
       <div class="ballot-mockup-body">
-        <!-- Riga candidato sindaco in alto -->
         <div class="ballot-mayor">
           <strong class="mayor-name">ANNA MARIA CELESTI</strong>
           <span class="mayor-role">(candidato alla carica di Sindaco)</span>
         </div>
 
-        <!-- Riga lista: simbolo FdI con X + righe preferenze -->
         <div class="ballot-list-row">
-
-          <!-- Simbolo FdI ufficiale (cerchio navy + Meloni) -->
           <div class="ballot-symbol-wrap">
-            <svg class="ballot-fdi-circle" viewBox="0 0 200 200" width="170" height="170" aria-label="Simbolo Fratelli d'Italia Giorgia Meloni">
-              <!-- outer navy circle -->
-              <circle cx="100" cy="100" r="96" fill="#0b2550" stroke="#0b2550" stroke-width="1"/>
-              <!-- thin white inner ring -->
-              <circle cx="100" cy="100" r="91" fill="none" stroke="#ffffff" stroke-width="1.5"/>
-              <!-- top text "FRATELLI d'ITALIA" -->
-              <text x="100" y="48" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="19" font-weight="800" fill="#ffffff" letter-spacing="0.4">FRATELLI</text>
-              <text x="100" y="70" text-anchor="middle" font-family="Georgia, serif" font-style="italic" font-size="19" font-weight="700" fill="#ffffff">d'ITALIA</text>
-              <!-- "GIORGIA MELONI" in gold/yellow -->
-              <text x="100" y="100" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="800" fill="#f5d343" letter-spacing="0.6">GIORGIA</text>
-              <text x="100" y="120" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="900" fill="#f5d343" letter-spacing="1.2">MELONI</text>
-              <!-- tricolore separator line -->
-              <g>
-                <rect x="28" y="128" width="48" height="3" fill="#009246"/>
-                <rect x="76" y="128" width="48" height="3" fill="#f4f4f4"/>
-                <rect x="124" y="128" width="48" height="3" fill="#ce2b37"/>
-              </g>
-              <!-- bottom: white half-circle with tiny tricolore flame -->
-              <path d="M 14 131 A 96 96 0 0 0 186 131 L 186 135 A 96 96 0 0 1 14 135 Z" fill="#0b2550"/>
-              <path d="M 100 196 A 96 96 0 0 0 196 100 L 100 100 Z" fill="#ffffff" opacity="0"/>
-              <!-- white arc background for flame -->
-              <path d="M 100 196 A 96 96 0 0 0 196 100 A 96 96 0 0 0 4 100 A 96 96 0 0 0 100 196 Z M 100 135 A 61 61 0 0 1 161 196 L 39 196 A 61 61 0 0 1 100 135 Z" fill="#0b2550" fill-rule="evenodd"/>
-              <!-- white container for flame -->
-              <path d="M 40 196 A 60 60 0 0 1 160 196 Z" fill="#ffffff"/>
-              <!-- tricolore flame - compact -->
-              <g transform="translate(100,172)">
-                <!-- Green -->
-                <path d="M -2 -22 C -12 -16, -16 -6, -14 4 C -12 12, -8 16, -6 18 L -4 12 C -2 8, 0 4, 0 -2 C -1 -4, -2 -14, -2 -22 Z" fill="#009246"/>
-                <!-- White middle -->
-                <path d="M 0 -20 C -6 -14, -8 -4, -6 4 C -4 10, -2 12, 0 14 C 2 12, 4 10, 6 4 C 8 -4, 6 -14, 0 -20 Z" fill="#f4f4f4"/>
-                <!-- Red -->
-                <path d="M 2 -22 C 12 -16, 16 -6, 14 4 C 12 12, 8 16, 6 18 L 4 12 C 2 8, 0 4, 0 -2 C 1 -4, 2 -14, 2 -22 Z" fill="#ce2b37"/>
-              </g>
-            </svg>
-            <!-- Hand-drawn BLACK X overlay -->
+            <img class="ballot-fdi-img" src="assets/img/fdi-logo.svg" alt="Simbolo Fratelli d'Italia" width="170" height="170" decoding="async" loading="lazy" />
+            <!-- X nera disegnata a mano -->
             <svg class="x-mark x-mark-black" viewBox="0 0 200 200" aria-hidden="true">
               <path d="M 30 30 Q 32 32, 170 170" stroke="#0d0d0d" stroke-width="10" stroke-linecap="round" fill="none"/>
               <path d="M 170 30 Q 168 32, 30 170" stroke="#0d0d0d" stroke-width="10" stroke-linecap="round" fill="none"/>
@@ -375,16 +390,12 @@
             <span class="ballot-step-tag"><span>1</span> Metti una X qui</span>
           </div>
 
-          <!-- Preferenze con CALOSCI in stampatello + mano con matita -->
           <div class="ballot-pref ballot-pref-big">
             <div class="pref-line pref-line-written">
               <span class="pref-written">CALOSCI</span>
               <svg class="pencil-hand" viewBox="0 0 120 100" width="90" height="75" aria-hidden="true">
-                <!-- hand -->
                 <path d="M 40 60 Q 35 50, 50 45 Q 65 40, 80 48 L 92 55 Q 96 60, 92 70 L 88 85 Q 80 98, 60 96 L 45 95 Q 35 88, 38 75 Z" fill="#f8b8a0" stroke="#c97a62" stroke-width="1.2"/>
-                <!-- cuff -->
                 <rect x="38" y="82" width="54" height="14" fill="#4a4a4a" stroke="#2a2a2a" stroke-width="1"/>
-                <!-- pencil -->
                 <g transform="rotate(-28 50 40)">
                   <rect x="32" y="18" width="60" height="11" fill="#f5c043" stroke="#c69818" stroke-width="1"/>
                   <polygon points="92,18 106,23.5 92,29" fill="#e6c8a0" stroke="#8b6e45" stroke-width="1"/>
@@ -397,7 +408,8 @@
             <div class="pref-line"></div>
             <span class="ballot-step-tag right"><span>2</span> Scrivi CALOSCI (o solo CALO)</span>
           </div>
-        </div></div>
+        </div>
+      </div>
 
       <div class="ballot-mockup-footer">
         <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm-1 15v-2h2v2h-2zm0-4V7h2v6h-2z"/></svg>
@@ -405,54 +417,26 @@
       </div>
     </div>
 
-    <!-- Due varianti veloci (stile Jacopo Venturi) -->
+    <!-- Due varianti rapide -->
     <div class="vote-variants">
       <div class="variant-item">
-        <svg class="variant-mini-fdi" viewBox="0 0 200 200" width="110" height="110" aria-hidden="true">
-          <circle cx="100" cy="100" r="96" fill="#0b2550"/>
-          <circle cx="100" cy="100" r="91" fill="none" stroke="#ffffff" stroke-width="1.5"/>
-          <text x="100" y="48" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="19" font-weight="800" fill="#ffffff">FRATELLI</text>
-          <text x="100" y="70" text-anchor="middle" font-family="Georgia, serif" font-style="italic" font-size="19" font-weight="700" fill="#ffffff">d'ITALIA</text>
-          <text x="100" y="100" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="800" fill="#f5d343">GIORGIA</text>
-          <text x="100" y="120" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="900" fill="#f5d343">MELONI</text>
-          <rect x="28" y="128" width="48" height="3" fill="#009246"/>
-          <rect x="76" y="128" width="48" height="3" fill="#f4f4f4"/>
-          <rect x="124" y="128" width="48" height="3" fill="#ce2b37"/>
-          <path d="M 40 196 A 60 60 0 0 1 160 196 Z" fill="#ffffff"/>
-          <g transform="translate(100,172)">
-            <path d="M -2 -22 C -12 -16, -16 -6, -14 4 C -12 12, -8 16, -6 18 L -4 12 C -2 8, 0 4, 0 -2 C -1 -4, -2 -14, -2 -22 Z" fill="#009246"/>
-            <path d="M 0 -20 C -6 -14, -8 -4, -6 4 C -4 10, -2 12, 0 14 C 2 12, 4 10, 6 4 C 8 -4, 6 -14, 0 -20 Z" fill="#f4f4f4"/>
-            <path d="M 2 -22 C 12 -16, 16 -6, 14 4 C 12 12, 8 16, 6 18 L 4 12 C 2 8, 0 4, 0 -2 C 1 -4, 2 -14, 2 -22 Z" fill="#ce2b37"/>
-          </g>
-          <svg x="10" y="10" width="180" height="180" viewBox="0 0 200 200">
+        <div class="variant-fdi-wrap">
+          <img class="variant-fdi-img" src="assets/img/fdi-logo.svg" alt="" width="110" height="110" loading="lazy" decoding="async" aria-hidden="true" />
+          <svg class="variant-x" viewBox="0 0 200 200" aria-hidden="true">
             <path d="M 30 30 L 170 170" stroke="#0d0d0d" stroke-width="10" stroke-linecap="round"/>
             <path d="M 170 30 L 30 170" stroke="#0d0d0d" stroke-width="10" stroke-linecap="round"/>
           </svg>
-        </svg>
+        </div>
         <span class="variant-name">CALOSCI</span>
       </div>
       <div class="variant-item">
-        <svg class="variant-mini-fdi" viewBox="0 0 200 200" width="110" height="110" aria-hidden="true">
-          <circle cx="100" cy="100" r="96" fill="#0b2550"/>
-          <circle cx="100" cy="100" r="91" fill="none" stroke="#ffffff" stroke-width="1.5"/>
-          <text x="100" y="48" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="19" font-weight="800" fill="#ffffff">FRATELLI</text>
-          <text x="100" y="70" text-anchor="middle" font-family="Georgia, serif" font-style="italic" font-size="19" font-weight="700" fill="#ffffff">d'ITALIA</text>
-          <text x="100" y="100" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="800" fill="#f5d343">GIORGIA</text>
-          <text x="100" y="120" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="900" fill="#f5d343">MELONI</text>
-          <rect x="28" y="128" width="48" height="3" fill="#009246"/>
-          <rect x="76" y="128" width="48" height="3" fill="#f4f4f4"/>
-          <rect x="124" y="128" width="48" height="3" fill="#ce2b37"/>
-          <path d="M 40 196 A 60 60 0 0 1 160 196 Z" fill="#ffffff"/>
-          <g transform="translate(100,172)">
-            <path d="M -2 -22 C -12 -16, -16 -6, -14 4 C -12 12, -8 16, -6 18 L -4 12 C -2 8, 0 4, 0 -2 C -1 -4, -2 -14, -2 -22 Z" fill="#009246"/>
-            <path d="M 0 -20 C -6 -14, -8 -4, -6 4 C -4 10, -2 12, 0 14 C 2 12, 4 10, 6 4 C 8 -4, 6 -14, 0 -20 Z" fill="#f4f4f4"/>
-            <path d="M 2 -22 C 12 -16, 16 -6, 14 4 C 12 12, 8 16, 6 18 L 4 12 C 2 8, 0 4, 0 -2 C 1 -4, 2 -14, 2 -22 Z" fill="#ce2b37"/>
-          </g>
-          <svg x="10" y="10" width="180" height="180" viewBox="0 0 200 200">
+        <div class="variant-fdi-wrap">
+          <img class="variant-fdi-img" src="assets/img/fdi-logo.svg" alt="" width="110" height="110" loading="lazy" decoding="async" aria-hidden="true" />
+          <svg class="variant-x" viewBox="0 0 200 200" aria-hidden="true">
             <path d="M 30 30 L 170 170" stroke="#0d0d0d" stroke-width="10" stroke-linecap="round"/>
             <path d="M 170 30 L 30 170" stroke="#0d0d0d" stroke-width="10" stroke-linecap="round"/>
           </svg>
-        </svg>
+        </div>
         <span class="variant-name">CALO</span>
       </div>
     </div>
@@ -487,42 +471,6 @@
         Al seggio porta <strong>documento d'identità</strong> e <strong>tessera elettorale</strong>.
       </p>
       <a href="#sostieni" class="btn btn-primary">Sostieni la campagna</a>
-    </div>
-  </div>
-</section>
-
-<!-- SOSTEGNO AL SINDACO - Anna Maria Celesti -->
-<section class="section-celesti" id="sindaco">
-  <div class="container">
-    <div class="celesti-card">
-      <div class="celesti-visual">
-        <div class="celesti-monogram">AC</div>
-        <div class="celesti-role">Candidata Sindaco</div>
-      </div>
-      <div class="celesti-text">
-        <p class="eyebrow">Il mio sindaco per Pistoia</p>
-        <h2 class="celesti-title">
-          A sostegno di<br/>
-          <strong>Anna Maria Celesti</strong>
-        </h2>
-        <p class="celesti-body">
-          La mia candidatura al Consiglio Comunale è un sostegno convinto e leale ad
-          <strong>Anna Maria Celesti</strong>, candidata Sindaco di Pistoia. Continuità,
-          competenza e <em>radicamento nel territorio</em> per una città che guarda avanti
-          senza dimenticare la propria identità.
-        </p>
-        <p class="celesti-body">
-          Chi vota <strong>Sara Calosci</strong> per il Consiglio, vota anche
-          <strong>Anna Maria Celesti</strong> per la guida di Palazzo di Giano.
-        </p>
-        <div class="celesti-meta">
-          <span>Lista <strong>Fratelli d'Italia</strong></span>
-          <span>·</span>
-          <span>Elezioni <strong>24-25 Maggio 2026</strong></span>
-          <span>·</span>
-          <span>Comune di Pistoia</span>
-        </div>
-      </div>
     </div>
   </div>
 </section>
@@ -587,7 +535,7 @@
         leggo personalmente ogni messaggio e rispondo al più presto.
       </p>
 
-      <a class="whatsapp-card" href="https://wa.me/393405146075?text=Ciao%20Sara%2C%20ho%20visitato%20il%20tuo%20sito%20e%20vorrei%20saperne%20di%20pi%C3%B9%20sul%20tuo%20programma%20per%20Pistoia.%20Quando%20potresti%20sentirmi%3F%20Grazie." target="_blank" rel="noopener">
+      <a class="whatsapp-card" href="https://wa.me/393405146075?text=Ciao%20Sara%2C%20ho%20visitato%20il%20tuo%20sito%20e%20vorrei%20saperne%20di%20pi%C3%B9%20sul%20tuo%20programma%20per%20Pistoia.%20Quando%20potresti%20sentirmi%3F%20Grazie." target="_blank" rel="noopener" aria-label="Scrivi a Sara su WhatsApp">
         <span class="wa-icon" aria-hidden="true">
           <svg viewBox="0 0 32 32" width="36" height="36"><path fill="#fff" d="M16 3C9 3 3.3 8.7 3.3 15.7c0 2.5.7 4.9 2 7L3 29l6.5-2.1c2 1.1 4.3 1.7 6.5 1.7 7 0 12.7-5.7 12.7-12.7S23 3 16 3zm0 23.1c-2 0-3.9-.5-5.6-1.5l-.4-.2-3.9 1.2 1.2-3.7-.3-.4c-1-1.7-1.6-3.6-1.6-5.5 0-5.9 4.8-10.7 10.7-10.7 5.9 0 10.7 4.8 10.7 10.7S21.9 26.1 16 26.1zm5.8-8c-.3-.2-1.9-.9-2.1-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1-.3-.2-1.3-.5-2.5-1.5-.9-.8-1.5-1.8-1.7-2.2-.2-.3 0-.5.1-.7l.5-.6c.2-.2.2-.3.3-.5.1-.2.1-.4 0-.6 0-.2-.7-1.7-1-2.3-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.2-1.2 2.9 0 1.7 1.2 3.3 1.4 3.5.2.2 2.4 3.7 5.8 5.1.8.3 1.5.5 2 .7.8.3 1.6.2 2.2.1.7-.1 1.9-.8 2.2-1.5.3-.8.3-1.4.2-1.5-.1-.2-.3-.3-.6-.4z"/></svg>
         </span>
@@ -599,27 +547,27 @@
         <span class="wa-arrow" aria-hidden="true">→</span>
       </a>
 
-      <div class="socials">
-        <a href="#" aria-label="Facebook" class="social">
-          <svg viewBox="0 0 24 24" width="22" height="22"><path d="M13 22v-8h3l1-4h-4V7.5C13 6.6 13.3 6 14.7 6H17V2.2C16.6 2.1 15.2 2 13.7 2 10.6 2 9 3.7 9 7v3H6v4h3v8h4z" fill="currentColor"/></svg>
+      <div class="socials" aria-label="Profili social">
+        <a href="#" aria-label="Facebook" class="social" rel="noopener">
+          <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M13 22v-8h3l1-4h-4V7.5C13 6.6 13.3 6 14.7 6H17V2.2C16.6 2.1 15.2 2 13.7 2 10.6 2 9 3.7 9 7v3H6v4h3v8h4z" fill="currentColor"/></svg>
         </a>
-        <a href="#" aria-label="Instagram" class="social">
-          <svg viewBox="0 0 24 24" width="22" height="22"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.8.3 2.3.4.6.2 1 .5 1.4 1 .5.4.8.8 1 1.4.1.5.3 1.1.4 2.3.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.3 1.8-.4 2.3-.2.6-.5 1-1 1.4-.4.5-.8.8-1.4 1-.5.1-1.1.3-2.3.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.8-.3-2.3-.4-.6-.2-1-.5-1.4-1-.5-.4-.8-.8-1-1.4-.1-.5-.3-1.1-.4-2.3C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c.1-1.2.3-1.8.4-2.3.2-.6.5-1 1-1.4.4-.5.8-.8 1.4-1 .5-.1 1.1-.3 2.3-.4C8.4 2.2 8.8 2.2 12 2.2zm0 3.2c-3.6 0-6.6 3-6.6 6.6s3 6.6 6.6 6.6 6.6-3 6.6-6.6-3-6.6-6.6-6.6zm0 10.9c-2.4 0-4.3-1.9-4.3-4.3S9.6 7.7 12 7.7s4.3 1.9 4.3 4.3-1.9 4.3-4.3 4.3zm6.9-11.1c0 .8-.7 1.5-1.5 1.5S15.9 6 15.9 5.2s.7-1.5 1.5-1.5 1.5.7 1.5 1.5z" fill="currentColor"/></svg>
+        <a href="#" aria-label="Instagram" class="social" rel="noopener">
+          <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.8.3 2.3.4.6.2 1 .5 1.4 1 .5.4.8.8 1 1.4.1.5.3 1.1.4 2.3.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.3 1.8-.4 2.3-.2.6-.5 1-1 1.4-.4.5-.8.8-1.4 1-.5.1-1.1.3-2.3.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.8-.3-2.3-.4-.6-.2-1-.5-1.4-1-.5-.4-.8-.8-1-1.4-.1-.5-.3-1.1-.4-2.3C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c.1-1.2.3-1.8.4-2.3.2-.6.5-1 1-1.4.4-.5.8-.8 1.4-1 .5-.1 1.1-.3 2.3-.4C8.4 2.2 8.8 2.2 12 2.2zm0 3.2c-3.6 0-6.6 3-6.6 6.6s3 6.6 6.6 6.6 6.6-3 6.6-6.6-3-6.6-6.6-6.6zm0 10.9c-2.4 0-4.3-1.9-4.3-4.3S9.6 7.7 12 7.7s4.3 1.9 4.3 4.3-1.9 4.3-4.3 4.3zm6.9-11.1c0 .8-.7 1.5-1.5 1.5S15.9 6 15.9 5.2s.7-1.5 1.5-1.5 1.5.7 1.5 1.5z" fill="currentColor"/></svg>
         </a>
-        <a href="#" aria-label="X" class="social">
-          <svg viewBox="0 0 24 24" width="22" height="22"><path d="M18.9 2H22l-7.5 8.6L23 22h-6.9l-5.4-7-6.2 7H1.4l8-9.2L1 2h7l4.9 6.4L18.9 2zm-2.4 18h1.9L7.6 4H5.6l10.9 16z" fill="currentColor"/></svg>
+        <a href="#" aria-label="X" class="social" rel="noopener">
+          <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M18.9 2H22l-7.5 8.6L23 22h-6.9l-5.4-7-6.2 7H1.4l8-9.2L1 2h7l4.9 6.4L18.9 2zm-2.4 18h1.9L7.6 4H5.6l10.9 16z" fill="currentColor"/></svg>
         </a>
       </div>
     </div>
 
     <aside class="col-side">
-      <form class="contact-form" onsubmit="handleFormSubmit(event)">
+      <form class="contact-form" onsubmit="handleFormSubmit(event)" novalidate>
         <h3>Scrivimi</h3>
         <label>Nome e cognome
-          <input type="text" name="nome" required />
+          <input type="text" name="nome" autocomplete="name" required />
         </label>
         <label>Email
-          <input type="email" name="email" required />
+          <input type="email" name="email" autocomplete="email" required />
         </label>
         <label>Quartiere (opzionale)
           <input type="text" name="quartiere" />
@@ -642,18 +590,21 @@
 <footer class="site-footer">
   <div class="container footer-grid">
     <div class="foot-brand">
-      <span class="brand-monogram small">SC</span>
+      <span class="brand-monogram small" aria-hidden="true">SC</span>
       <div>
         <p class="foot-name">Sara Calosci</p>
         <p class="foot-role">Candidata Consigliere Comunale · Pistoia</p>
-        <p class="foot-party">Lista Fratelli d'Italia · Elezioni Amministrative 2026</p>
+        <p class="foot-party">
+          <img src="assets/img/fdi-logo.svg" alt="" width="22" height="22" loading="lazy" decoding="async" aria-hidden="true" class="foot-fdi-mini" />
+          Lista Fratelli d'Italia · Elezioni Amministrative 2026
+        </p>
       </div>
     </div>
     <nav class="foot-nav" aria-label="Navigazione piè di pagina">
       <a href="#chi-sono">Chi sono</a>
       <a href="#programma">Programma</a>
       <a href="#come-votare">Come votare</a>
-      <a href="#sindaco">Sindaco</a>
+      <a href="#celesti">Celesti Sindaco</a>
       <a href="#eventi">Eventi</a>
       <a href="#contatti">Contatti</a>
     </nav>
@@ -673,6 +624,6 @@
   <span class="wa-float-label">Scrivimi</span>
 </a>
 
-<script src="assets/js/main.js"></script>
+<script src="assets/js/main.js" defer></script>
 </body>
 </html>
