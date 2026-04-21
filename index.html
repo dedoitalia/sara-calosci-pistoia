@@ -35,10 +35,14 @@
         <span class="brand-line2">Consigliere Comunale · Pistoia</span>
       </span>
     </a>
+    <span class="fdi-logo" aria-hidden="true">
+      <img src="https://files.catbox.moe/s7jnrh.png" alt="Fratelli d'Italia — Giorgia Meloni" />
+    </span>
     <nav class="site-nav" aria-label="Navigazione principale">
       <a href="#chi-sono">Chi sono</a>
       <a href="#programma">Programma</a>
       <a href="#come-votare">Come votare</a>
+      <a href="#sindaco">Sindaco</a>
       <a href="#eventi">Eventi</a>
       <a href="#contatti">Contatti</a>
       <a href="#sostieni" class="nav-cta">Sostieni</a>
@@ -71,6 +75,13 @@
       <div class="hero-badge">
         <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M12 2 4 5v6c0 5 3.4 9.6 8 11 4.6-1.4 8-6 8-11V5l-8-3z" fill="currentColor"/></svg>
         <span>Lista <strong>Fratelli d'Italia</strong> · Comune di Pistoia</span>
+      </div>
+      <div class="hero-logo-strip">
+        <img src="https://files.catbox.moe/s7jnrh.png" alt="Fratelli d'Italia — Giorgia Meloni" />
+        <span class="strip-text">
+          <span class="strip-lab">Lista Ufficiale</span>
+          <span class="strip-val">Fratelli d'Italia — Giorgia Meloni</span>
+        </span>
       </div>
     </div>
 
@@ -292,74 +303,226 @@
   </div>
 </section>
 
-<!-- COME VOTARE -->
+<!-- COME VOTARE - infografica scheda elettorale -->
 <section class="section section-vote" id="come-votare">
   <div class="container">
     <div class="section-header">
       <p class="eyebrow">Come votarmi</p>
       <h2 class="section-title">Il <strong>24 e 25 Maggio</strong><br/>al seggio, così.</h2>
       <p class="section-lede">
-        Due gesti semplici per darmi il tuo voto: una <strong>X</strong> sul simbolo
-        di Fratelli d'Italia e il mio cognome a fianco.
+        Due gesti semplici sulla scheda: una <strong>X</strong> sul simbolo
+        di Fratelli d'Italia e <strong>Calosci</strong> nello spazio delle preferenze.
       </p>
     </div>
 
-    <div class="vote-grid">
-
-      <!-- STEP 1: X on FdI flame -->
-      <div class="vote-step">
-        <div class="vote-step-label"><span>1</span>Fai una X sul simbolo</div>
-        <div class="ballot-card">
-          <!-- FdI symbol with tricolore flame -->
-          <div class="fdi-flame" aria-hidden="true">
-            <svg viewBox="0 0 140 140" width="160" height="160">
-              <!-- white background circle -->
-              <circle cx="70" cy="70" r="65" fill="#ffffff" stroke="#0b2545" stroke-width="2"/>
-              <!-- tricolore flame: green, white, red -->
-              <path d="M 70 30 C 55 40, 45 55, 48 72 C 50 82, 58 88, 58 92 C 58 82, 62 72, 70 65 C 70 65, 68 80, 74 85 C 80 80, 82 68, 82 68 C 88 78, 92 88, 92 95 C 98 88, 103 78, 100 65 C 96 48, 82 36, 70 30 Z" fill="#009246"/>
-              <path d="M 70 38 C 58 46, 52 58, 54 72 C 56 80, 62 84, 64 88 C 66 80, 68 72, 72 68 C 74 74, 74 82, 76 86 C 82 82, 86 72, 88 66 C 92 74, 96 82, 94 88 C 98 80, 100 70, 97 60 C 92 48, 80 40, 70 38 Z" fill="#f4f4f4"/>
-              <path d="M 70 48 C 62 54, 58 62, 60 72 C 62 78, 66 82, 68 84 C 69 78, 72 72, 74 70 C 76 76, 78 82, 79 84 C 83 80, 86 72, 88 68 C 90 74, 92 78, 92 82 C 94 76, 94 68, 92 62 C 88 54, 78 48, 70 48 Z" fill="#ce2b37"/>
-              <!-- base rectangle with FDI text -->
-              <rect x="32" y="100" width="76" height="22" rx="2" fill="#0b2545"/>
-              <text x="70" y="116" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" font-weight="800" fill="#ffffff" letter-spacing="1.2">FRATELLI D'ITALIA</text>
-              <!-- mini tricolore bars -->
-              <rect x="32" y="100" width="25.3" height="3" fill="#009246"/>
-              <rect x="57.3" y="100" width="25.3" height="3" fill="#f4f4f4"/>
-              <rect x="82.6" y="100" width="25.4" height="3" fill="#ce2b37"/>
-            </svg>
-            <!-- Hand-drawn X on top -->
-            <svg class="x-mark" viewBox="0 0 100 100" width="120" height="120" aria-hidden="true">
-              <path d="M 18 18 Q 20 20, 82 82" stroke="#8b1a1a" stroke-width="9" stroke-linecap="round" fill="none" opacity="0.92"/>
-              <path d="M 82 18 Q 80 20, 18 82" stroke="#8b1a1a" stroke-width="9" stroke-linecap="round" fill="none" opacity="0.92"/>
-            </svg>
-          </div>
-          <p class="ballot-caption">Il simbolo di <strong>Fratelli d'Italia</strong></p>
-        </div>
+    <!-- FAC-SIMILE scheda elettorale ispirato al modello ufficiale -->
+    <div class="ballot-mockup">
+      <div class="ballot-mockup-header">
+        <span class="ballot-ref">Fac-simile scheda · Elezioni Comunali Pistoia 2026</span>
       </div>
 
-      <!-- STEP 2: Write CALOSCI -->
-      <div class="vote-step">
-        <div class="vote-step-label"><span>2</span>Scrivi il mio cognome</div>
-        <div class="ballot-card">
-          <div class="ballot-name-line">
-            <span class="ballot-prefix">Preferenza:</span>
-            <span class="ballot-name">Calosci</span>
+      <div class="ballot-mockup-body">
+        <!-- Riga candidato sindaco in alto -->
+        <div class="ballot-mayor">
+          <strong class="mayor-name">ANNA MARIA CELESTI</strong>
+          <span class="mayor-role">(candidato alla carica di Sindaco)</span>
+        </div>
+
+        <!-- Riga lista: simbolo FdI con X + righe preferenze -->
+        <div class="ballot-list-row">
+
+          <!-- Simbolo FdI ufficiale (cerchio navy + Meloni) -->
+          <div class="ballot-symbol-wrap">
+            <svg class="ballot-fdi-circle" viewBox="0 0 200 200" width="170" height="170" aria-label="Simbolo Fratelli d'Italia Giorgia Meloni">
+              <!-- outer navy circle -->
+              <circle cx="100" cy="100" r="96" fill="#0b2550" stroke="#0b2550" stroke-width="1"/>
+              <!-- thin white inner ring -->
+              <circle cx="100" cy="100" r="91" fill="none" stroke="#ffffff" stroke-width="1.5"/>
+              <!-- top text "FRATELLI d'ITALIA" -->
+              <text x="100" y="48" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="19" font-weight="800" fill="#ffffff" letter-spacing="0.4">FRATELLI</text>
+              <text x="100" y="70" text-anchor="middle" font-family="Georgia, serif" font-style="italic" font-size="19" font-weight="700" fill="#ffffff">d'ITALIA</text>
+              <!-- "GIORGIA MELONI" in gold/yellow -->
+              <text x="100" y="100" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="800" fill="#f5d343" letter-spacing="0.6">GIORGIA</text>
+              <text x="100" y="120" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="900" fill="#f5d343" letter-spacing="1.2">MELONI</text>
+              <!-- tricolore separator line -->
+              <g>
+                <rect x="28" y="128" width="48" height="3" fill="#009246"/>
+                <rect x="76" y="128" width="48" height="3" fill="#f4f4f4"/>
+                <rect x="124" y="128" width="48" height="3" fill="#ce2b37"/>
+              </g>
+              <!-- bottom: white half-circle with tiny tricolore flame -->
+              <path d="M 14 131 A 96 96 0 0 0 186 131 L 186 135 A 96 96 0 0 1 14 135 Z" fill="#0b2550"/>
+              <path d="M 100 196 A 96 96 0 0 0 196 100 L 100 100 Z" fill="#ffffff" opacity="0"/>
+              <!-- white arc background for flame -->
+              <path d="M 100 196 A 96 96 0 0 0 196 100 A 96 96 0 0 0 4 100 A 96 96 0 0 0 100 196 Z M 100 135 A 61 61 0 0 1 161 196 L 39 196 A 61 61 0 0 1 100 135 Z" fill="#0b2550" fill-rule="evenodd"/>
+              <!-- white container for flame -->
+              <path d="M 40 196 A 60 60 0 0 1 160 196 Z" fill="#ffffff"/>
+              <!-- tricolore flame - compact -->
+              <g transform="translate(100,172)">
+                <!-- Green -->
+                <path d="M -2 -22 C -12 -16, -16 -6, -14 4 C -12 12, -8 16, -6 18 L -4 12 C -2 8, 0 4, 0 -2 C -1 -4, -2 -14, -2 -22 Z" fill="#009246"/>
+                <!-- White middle -->
+                <path d="M 0 -20 C -6 -14, -8 -4, -6 4 C -4 10, -2 12, 0 14 C 2 12, 4 10, 6 4 C 8 -4, 6 -14, 0 -20 Z" fill="#f4f4f4"/>
+                <!-- Red -->
+                <path d="M 2 -22 C 12 -16, 16 -6, 14 4 C 12 12, 8 16, 6 18 L 4 12 C 2 8, 0 4, 0 -2 C 1 -4, 2 -14, 2 -22 Z" fill="#ce2b37"/>
+              </g>
+            </svg>
+            <!-- Hand-drawn BLACK X overlay -->
+            <svg class="x-mark x-mark-black" viewBox="0 0 200 200" aria-hidden="true">
+              <path d="M 30 30 Q 32 32, 170 170" stroke="#0d0d0d" stroke-width="10" stroke-linecap="round" fill="none"/>
+              <path d="M 170 30 Q 168 32, 30 170" stroke="#0d0d0d" stroke-width="10" stroke-linecap="round" fill="none"/>
+            </svg>
+            <span class="ballot-step-tag"><span>1</span> Metti una X qui</span>
           </div>
-          <p class="ballot-caption">
-            Va bene anche solo <strong>CALO</strong>.<br/>
-            Ricorda: una sola preferenza di lista.
-          </p>
+
+          <!-- Preferenze con CALOSCI in stampatello + mano con matita -->
+          <div class="ballot-pref ballot-pref-big">
+            <div class="pref-line pref-line-written">
+              <span class="pref-written">CALOSCI</span>
+              <svg class="pencil-hand" viewBox="0 0 120 100" width="90" height="75" aria-hidden="true">
+                <!-- hand -->
+                <path d="M 40 60 Q 35 50, 50 45 Q 65 40, 80 48 L 92 55 Q 96 60, 92 70 L 88 85 Q 80 98, 60 96 L 45 95 Q 35 88, 38 75 Z" fill="#f8b8a0" stroke="#c97a62" stroke-width="1.2"/>
+                <!-- cuff -->
+                <rect x="38" y="82" width="54" height="14" fill="#4a4a4a" stroke="#2a2a2a" stroke-width="1"/>
+                <!-- pencil -->
+                <g transform="rotate(-28 50 40)">
+                  <rect x="32" y="18" width="60" height="11" fill="#f5c043" stroke="#c69818" stroke-width="1"/>
+                  <polygon points="92,18 106,23.5 92,29" fill="#e6c8a0" stroke="#8b6e45" stroke-width="1"/>
+                  <polygon points="104,21 106,23.5 104,26" fill="#2a2a2a"/>
+                  <rect x="28" y="18" width="6" height="11" fill="#d44040" stroke="#8b2020" stroke-width="1"/>
+                  <rect x="26" y="20" width="3" height="7" fill="#b8b8b8"/>
+                </g>
+              </svg>
+            </div>
+            <div class="pref-line"></div>
+            <span class="ballot-step-tag right"><span>2</span> Scrivi CALOSCI (o solo CALO)</span>
+          </div>
+        </div></div>
+
+      <div class="ballot-mockup-footer">
+        <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm-1 15v-2h2v2h-2zm0-4V7h2v6h-2z"/></svg>
+        Una sola preferenza di lista · Fac-simile illustrativo — la scheda reale può differire nel layout
+      </div>
+    </div>
+
+    <!-- Due varianti veloci (stile Jacopo Venturi) -->
+    <div class="vote-variants">
+      <div class="variant-item">
+        <svg class="variant-mini-fdi" viewBox="0 0 200 200" width="110" height="110" aria-hidden="true">
+          <circle cx="100" cy="100" r="96" fill="#0b2550"/>
+          <circle cx="100" cy="100" r="91" fill="none" stroke="#ffffff" stroke-width="1.5"/>
+          <text x="100" y="48" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="19" font-weight="800" fill="#ffffff">FRATELLI</text>
+          <text x="100" y="70" text-anchor="middle" font-family="Georgia, serif" font-style="italic" font-size="19" font-weight="700" fill="#ffffff">d'ITALIA</text>
+          <text x="100" y="100" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="800" fill="#f5d343">GIORGIA</text>
+          <text x="100" y="120" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="900" fill="#f5d343">MELONI</text>
+          <rect x="28" y="128" width="48" height="3" fill="#009246"/>
+          <rect x="76" y="128" width="48" height="3" fill="#f4f4f4"/>
+          <rect x="124" y="128" width="48" height="3" fill="#ce2b37"/>
+          <path d="M 40 196 A 60 60 0 0 1 160 196 Z" fill="#ffffff"/>
+          <g transform="translate(100,172)">
+            <path d="M -2 -22 C -12 -16, -16 -6, -14 4 C -12 12, -8 16, -6 18 L -4 12 C -2 8, 0 4, 0 -2 C -1 -4, -2 -14, -2 -22 Z" fill="#009246"/>
+            <path d="M 0 -20 C -6 -14, -8 -4, -6 4 C -4 10, -2 12, 0 14 C 2 12, 4 10, 6 4 C 8 -4, 6 -14, 0 -20 Z" fill="#f4f4f4"/>
+            <path d="M 2 -22 C 12 -16, 16 -6, 14 4 C 12 12, 8 16, 6 18 L 4 12 C 2 8, 0 4, 0 -2 C 1 -4, 2 -14, 2 -22 Z" fill="#ce2b37"/>
+          </g>
+          <svg x="10" y="10" width="180" height="180" viewBox="0 0 200 200">
+            <path d="M 30 30 L 170 170" stroke="#0d0d0d" stroke-width="10" stroke-linecap="round"/>
+            <path d="M 170 30 L 30 170" stroke="#0d0d0d" stroke-width="10" stroke-linecap="round"/>
+          </svg>
+        </svg>
+        <span class="variant-name">CALOSCI</span>
+      </div>
+      <div class="variant-item">
+        <svg class="variant-mini-fdi" viewBox="0 0 200 200" width="110" height="110" aria-hidden="true">
+          <circle cx="100" cy="100" r="96" fill="#0b2550"/>
+          <circle cx="100" cy="100" r="91" fill="none" stroke="#ffffff" stroke-width="1.5"/>
+          <text x="100" y="48" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="19" font-weight="800" fill="#ffffff">FRATELLI</text>
+          <text x="100" y="70" text-anchor="middle" font-family="Georgia, serif" font-style="italic" font-size="19" font-weight="700" fill="#ffffff">d'ITALIA</text>
+          <text x="100" y="100" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="800" fill="#f5d343">GIORGIA</text>
+          <text x="100" y="120" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="900" fill="#f5d343">MELONI</text>
+          <rect x="28" y="128" width="48" height="3" fill="#009246"/>
+          <rect x="76" y="128" width="48" height="3" fill="#f4f4f4"/>
+          <rect x="124" y="128" width="48" height="3" fill="#ce2b37"/>
+          <path d="M 40 196 A 60 60 0 0 1 160 196 Z" fill="#ffffff"/>
+          <g transform="translate(100,172)">
+            <path d="M -2 -22 C -12 -16, -16 -6, -14 4 C -12 12, -8 16, -6 18 L -4 12 C -2 8, 0 4, 0 -2 C -1 -4, -2 -14, -2 -22 Z" fill="#009246"/>
+            <path d="M 0 -20 C -6 -14, -8 -4, -6 4 C -4 10, -2 12, 0 14 C 2 12, 4 10, 6 4 C 8 -4, 6 -14, 0 -20 Z" fill="#f4f4f4"/>
+            <path d="M 2 -22 C 12 -16, 16 -6, 14 4 C 12 12, 8 16, 6 18 L 4 12 C 2 8, 0 4, 0 -2 C 1 -4, 2 -14, 2 -22 Z" fill="#ce2b37"/>
+          </g>
+          <svg x="10" y="10" width="180" height="180" viewBox="0 0 200 200">
+            <path d="M 30 30 L 170 170" stroke="#0d0d0d" stroke-width="10" stroke-linecap="round"/>
+            <path d="M 170 30 L 30 170" stroke="#0d0d0d" stroke-width="10" stroke-linecap="round"/>
+          </svg>
+        </svg>
+        <span class="variant-name">CALO</span>
+      </div>
+    </div>
+
+    <div class="vote-steps">
+      <div class="vote-step-mini">
+        <div class="mini-num">1</div>
+        <div>
+          <h4>Segna la X</h4>
+          <p>Una sola croce sul simbolo di <strong>Fratelli d'Italia</strong>, al centro della scheda.</p>
         </div>
       </div>
-
+      <div class="vote-step-mini">
+        <div class="mini-num">2</div>
+        <div>
+          <h4>Scrivi Calosci</h4>
+          <p>Nello spazio "preferenze" scrivi <strong>Calosci</strong> (va bene anche solo <strong>Calo</strong>).</p>
+        </div>
+      </div>
+      <div class="vote-step-mini">
+        <div class="mini-num">3</div>
+        <div>
+          <h4>Ripiega e consegna</h4>
+          <p>Ripiega la scheda, torna al banco del Presidente e consegnala. Fatto.</p>
+        </div>
+      </div>
     </div>
 
     <div class="vote-cta">
       <p class="vote-reminder">
         <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm-1 15v-2h2v2h-2zm0-4V7h2v6h-2z"/></svg>
-        Porta al seggio un <strong>documento d'identità</strong> valido e la <strong>tessera elettorale</strong>.
+        Al seggio porta <strong>documento d'identità</strong> e <strong>tessera elettorale</strong>.
       </p>
-      <a href="#sostieni" class="btn btn-primary">Unisciti alla campagna</a>
+      <a href="#sostieni" class="btn btn-primary">Sostieni la campagna</a>
+    </div>
+  </div>
+</section>
+
+<!-- SOSTEGNO AL SINDACO - Anna Maria Celesti -->
+<section class="section-celesti" id="sindaco">
+  <div class="container">
+    <div class="celesti-card">
+      <div class="celesti-visual">
+        <div class="celesti-monogram">AC</div>
+        <div class="celesti-role">Candidata Sindaco</div>
+      </div>
+      <div class="celesti-text">
+        <p class="eyebrow">Il mio sindaco per Pistoia</p>
+        <h2 class="celesti-title">
+          A sostegno di<br/>
+          <strong>Anna Maria Celesti</strong>
+        </h2>
+        <p class="celesti-body">
+          La mia candidatura al Consiglio Comunale è un sostegno convinto e leale ad
+          <strong>Anna Maria Celesti</strong>, candidata Sindaco di Pistoia. Continuità,
+          competenza e <em>radicamento nel territorio</em> per una città che guarda avanti
+          senza dimenticare la propria identità.
+        </p>
+        <p class="celesti-body">
+          Chi vota <strong>Sara Calosci</strong> per il Consiglio, vota anche
+          <strong>Anna Maria Celesti</strong> per la guida di Palazzo di Giano.
+        </p>
+        <div class="celesti-meta">
+          <span>Lista <strong>Fratelli d'Italia</strong></span>
+          <span>·</span>
+          <span>Elezioni <strong>24-25 Maggio 2026</strong></span>
+          <span>·</span>
+          <span>Comune di Pistoia</span>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -490,6 +653,7 @@
       <a href="#chi-sono">Chi sono</a>
       <a href="#programma">Programma</a>
       <a href="#come-votare">Come votare</a>
+      <a href="#sindaco">Sindaco</a>
       <a href="#eventi">Eventi</a>
       <a href="#contatti">Contatti</a>
     </nav>
