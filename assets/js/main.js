@@ -117,25 +117,111 @@
   }
 })();
 
-// ---- Contact form (demo statica) ----
-function handleFormSubmit(event) {
-  event.preventDefault();
-  const form = event.target;
-  const note = document.getElementById('form-note');
+// ---- Contact form: invio via Formsubmit (no backend, no SMTP) ----
+// L'indirizzo di destinazione NON compare in chiaro nel sorgente HTML:
+// è ricomposto a runtime da due parti base64 splittate. Gli scraper
+// automatici che cercano stringhe "@" o "gmail" nel DOM non lo trovano.
+(function contactFormInit() {
+  function init() {
+    var form = document.getElementById('contact-form');
+    if (!form) return;
 
-  if (!form.checkValidity()) {
-    if (note) {
-      note.style.color = '#b81515';
-      note.textContent = 'Per favore compila tutti i campi richiesti.';
+    var note = document.getElementById('form-note');
+    var submitBtn = form.querySelector('button[type="submit"]');
+
+    function setNote(msg, color) {
+      if (!note) return;
+      note.style.color = color || 'var(--green)';
+      note.textContent = msg;
     }
-    form.reportValidity();
-    return;
+
+    // Ricomposizione email destinazione — parti base64
+    function getTargetEmail() {
+      var a = 'c2FyYWNhbG9z';
+      var b = 'Y2k3QGdtYWlsLmNvbQ==';
+      try { return atob(a + b); } catch (e) { return ''; }
+    }
+
+    form.addEventListener('submit', function (event) {
+      event.preventDefault();
+
+      if (!form.checkValidity()) {
+        setNote('Per favore compila tutti i campi richiesti.', '#b81515');
+        form.reportValidity();
+        return;
+      }
+
+      // Honeypot: se un bot ha riempito il campo nascosto, fingi successo e stop
+      var honey = form.querySelector('input[name="_honey"]');
+      if (honey && honey.value) {
+        setNote('Grazie! Ti risponderò presto.', 'var(--green)');
+        form.reset();
+        return;
+      }
+
+      var email = getTargetEmail();
+      if (!email) {
+        setNote('Impossibile inviare adesso — scrivimi su WhatsApp.', '#b81515');
+        return;
+      }
+
+      var data = {
+        nome: (form.nome && form.nome.value || '').trim(),
+        email: (form.email && form.email.value || '').trim(),
+        quartiere: (form.quartiere && form.quartiere.value || '').trim(),
+        messaggio: (form.messaggio && form.messaggio.value || '').trim(),
+        _subject: 'Nuovo messaggio dal sito — Sara Calosci',
+        _template: 'table',
+        _captcha: 'false',
+        _replyto: (form.email && form.email.value || '').trim()
+      };
+
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.dataset.origText = submitBtn.textContent;
+        submitBtn.textContent = 'Invio in corso…';
+      }
+      setNote('Invio del messaggio…', '#0b2545');
+
+      fetch('https://formsubmit.co/ajax/' + encodeURIComponent(email), {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify(data)
+      })
+      .then(function (r) {
+        return r.json().catch(function () { return {}; }).then(function (j) {
+          return { ok: r.ok, body: j };
+        });
+      })
+      .then(function (res) {
+        if (res.ok) {
+          setNote('Grazie! Il tuo messaggio è stato inviato. Ti risponderò al più presto.', 'var(--green)');
+          form.reset();
+          setTimeout(function () { setNote('', ''); }, 9000);
+        } else {
+          setNote('Invio non riuscito. Riprova tra poco o scrivimi su WhatsApp.', '#b81515');
+        }
+      })
+      .catch(function () {
+        setNote('Invio non riuscito (rete). Riprova o scrivimi su WhatsApp.', '#b81515');
+      })
+      .finally(function () {
+        if (submitBtn) {
+          submitBtn.disabled = false;
+          if (submitBtn.dataset.origText) {
+            submitBtn.textContent = submitBtn.dataset.origText;
+          }
+        }
+      });
+    });
   }
 
-  if (note) {
-    note.style.color = 'var(--green)';
-    note.textContent = 'Grazie! Il tuo messaggio è stato registrato. Ti risponderò al più presto.';
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
   }
-  form.reset();
-  setTimeout(() => { if (note) note.textContent = ''; }, 7000);
-}
+})();
