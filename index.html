@@ -565,7 +565,7 @@
     </div>
 
     <aside class="col-side">
-      <form class="contact-form" onsubmit="handleFormSubmit(event)" novalidate>
+      <form class="contact-form" id="contact-form" novalidate>
         <h3>Scrivimi</h3>
         <label>Nome e cognome
           <input type="text" name="nome" autocomplete="name" required />
@@ -580,9 +580,11 @@
           <textarea name="messaggio" rows="4" required></textarea>
         </label>
         <label class="consent">
-          <input type="checkbox" required />
+          <input type="checkbox" name="consenso" required />
           <span>Autorizzo il trattamento dei miei dati personali ai sensi del Reg. UE 2016/679.</span>
         </label>
+        <!-- Honeypot anti-bot: campo nascosto; se un bot lo riempie l'invio viene scartato -->
+        <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true" />
         <button type="submit" class="btn btn-primary">Invia messaggio</button>
         <p class="form-note" id="form-note" role="status" aria-live="polite"></p>
       </form>
