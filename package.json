@@ -1,0 +1,16 @@
+{
+  "name": "sara-calosci-pistoia",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Sito elettorale Sara Calosci — Consigliere Comunale Pistoia (Fratelli d'Italia)",
+  "type": "module",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}
