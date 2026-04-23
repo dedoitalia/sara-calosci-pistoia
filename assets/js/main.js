@@ -117,10 +117,10 @@
   }
 })();
 
-// ---- Contact form: invio via Formsubmit (no backend, no SMTP) ----
+// ---- Contact form: invio via Formsubmit (POST tradizionale + redirect)
+// ---- Nessuna dipendenza da CORS, funziona anche prima dell'attivazione.
 // L'indirizzo di destinazione NON compare in chiaro nel sorgente HTML:
-// è ricomposto a runtime da due parti base64 splittate. Gli scraper
-// automatici che cercano stringhe "@" o "gmail" nel DOM non lo trovano.
+// viene ricomposto a runtime da due parti base64 splittate.
 (function contactFormInit() {
   function init() {
     var form = document.getElementById('contact-form');
@@ -141,6 +141,20 @@
       var b = 'Y2k3QGdtYWlsLmNvbQ==';
       try { return atob(a + b); } catch (e) { return ''; }
     }
+
+    // Se l'utente è tornato dopo un submit riuscito, mostra la conferma
+    // e pulisce l'URL. Formsubmit redirige a ?inviato=1#contatti.
+    try {
+      var qs = window.location.search || '';
+      if (qs.indexOf('inviato=1') !== -1) {
+        setNote('Grazie! Il tuo messaggio è stato inviato. Ti risponderò al più presto.', 'var(--green)');
+        var clean = window.location.pathname + (window.location.hash || '');
+        if (window.history && window.history.replaceState) {
+          window.history.replaceState({}, document.title, clean);
+        }
+        setTimeout(function () { setNote('', ''); }, 12000);
+      }
+    } catch (e) {}
 
     form.addEventListener('submit', function (event) {
       event.preventDefault();
@@ -165,16 +179,36 @@
         return;
       }
 
-      var data = {
-        nome: (form.nome && form.nome.value || '').trim(),
-        email: (form.email && form.email.value || '').trim(),
-        quartiere: (form.quartiere && form.quartiere.value || '').trim(),
-        messaggio: (form.messaggio && form.messaggio.value || '').trim(),
-        _subject: 'Nuovo messaggio dal sito — Sara Calosci',
-        _template: 'table',
-        _captcha: 'false',
-        _replyto: (form.email && form.email.value || '').trim()
-      };
+      // Costruisce un form nascosto e lo invia via POST tradizionale a
+      // formsubmit.co. Questo evita qualsiasi problema di CORS e funziona
+      // anche alla primissima submission (attivazione).
+      var hidden = document.createElement('form');
+      hidden.method = 'POST';
+      hidden.action = 'https://formsubmit.co/' + email;
+      hidden.style.display = 'none';
+      hidden.acceptCharset = 'UTF-8';
+
+      function addField(name, value) {
+        var inp = document.createElement('input');
+        inp.type = 'hidden';
+        inp.name = name;
+        inp.value = value == null ? '' : String(value);
+        hidden.appendChild(inp);
+      }
+
+      var nextUrl = window.location.origin + window.location.pathname + '?inviato=1#contatti';
+
+      addField('nome', (form.nome && form.nome.value || '').trim());
+      addField('email', (form.email && form.email.value || '').trim());
+      addField('quartiere', (form.quartiere && form.quartiere.value || '').trim());
+      addField('messaggio', (form.messaggio && form.messaggio.value || '').trim());
+      addField('_subject', 'Nuovo messaggio dal sito — Sara Calosci');
+      addField('_template', 'table');
+      addField('_captcha', 'false');
+      addField('_replyto', (form.email && form.email.value || '').trim());
+      addField('_next', nextUrl);
+
+      document.body.appendChild(hidden);
 
       if (submitBtn) {
         submitBtn.disabled = true;
@@ -183,39 +217,9 @@
       }
       setNote('Invio del messaggio…', '#0b2545');
 
-      fetch('https://formsubmit.co/ajax/' + encodeURIComponent(email), {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Accept': 'application/json'
-        },
-        body: JSON.stringify(data)
-      })
-      .then(function (r) {
-        return r.json().catch(function () { return {}; }).then(function (j) {
-          return { ok: r.ok, body: j };
-        });
-      })
-      .then(function (res) {
-        if (res.ok) {
-          setNote('Grazie! Il tuo messaggio è stato inviato. Ti risponderò al più presto.', 'var(--green)');
-          form.reset();
-          setTimeout(function () { setNote('', ''); }, 9000);
-        } else {
-          setNote('Invio non riuscito. Riprova tra poco o scrivimi su WhatsApp.', '#b81515');
-        }
-      })
-      .catch(function () {
-        setNote('Invio non riuscito (rete). Riprova o scrivimi su WhatsApp.', '#b81515');
-      })
-      .finally(function () {
-        if (submitBtn) {
-          submitBtn.disabled = false;
-          if (submitBtn.dataset.origText) {
-            submitBtn.textContent = submitBtn.dataset.origText;
-          }
-        }
-      });
+      // Submit nativo — il browser navigherà a formsubmit, che poi
+      // farà il redirect a nextUrl (?inviato=1#contatti).
+      hidden.submit();
     });
   }
 
