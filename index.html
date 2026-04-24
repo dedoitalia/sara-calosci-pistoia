@@ -34,7 +34,7 @@
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" /></noscript>
 
 <!-- Foto hero in preload per migliorare LCP -->
-<link rel="preload" as="image" href="assets/img/sara-ritratto.jpg" />
+<link rel="preload" as="image" href="assets/img/sara-merlino.webp" type="image/webp" />
 
 <!-- CSS: singolo bundle ottimizzato -->
 <link rel="stylesheet" href="assets/css/style.css" />
@@ -107,15 +107,14 @@
 
     <figure class="hero-photo">
       <div class="photo-frame">
-        <img src="assets/img/sara-ritratto.jpg"
-             alt="Sara Calosci — ritratto istituzionale"
-             width="440" height="550"
-             fetchpriority="high"
-             decoding="async" />
-        <div class="photo-placeholder" aria-hidden="true">
-          <svg viewBox="0 0 120 120" width="120" height="120"><circle cx="60" cy="46" r="22" fill="#d9cfbd"/><path d="M18 108c4-22 22-34 42-34s38 12 42 34" fill="#d9cfbd"/></svg>
-          <p>Ritratto in arrivo</p>
-        </div>
+        <picture>
+          <source srcset="assets/img/sara-merlino.webp" type="image/webp" />
+          <img src="assets/img/sara-merlino.png"
+               alt="Sara Calosci — ritratto istituzionale con Merlino"
+               width="440" height="550"
+               fetchpriority="high"
+               decoding="async" />
+        </picture>
       </div>
       <figcaption class="photo-caption">
         <span class="photo-name">Sara Calosci</span>
